@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abderrahim Azeroual - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2A2A2A;
+            --secondary-color: #0077b5;
+            --text-color: #444;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-top: -100px;
+            border: 5px solid white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .event {
+            padding: 20px;
+            margin: 20px 0;
+            background: #f9f9f9;
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 4px;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .skills li {
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .projects {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .project {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .profile-img {
+                width: 150px;
+                height: 150px;
+                margin-top: -75px;
+            }
+            
+            section {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Abderrahim Azeroual</h1>
+        <p>Étudiant en Ingénierie Informatique et Data Science</p>
+    </header>
+
+    <div class="container">
+        <img src="MonImg.JPG" alt="Photo de profil" class="profile-img">
+        
+        <section class="about">
+            <h2>À propos</h2>
+            <p>Étudiant en ingénierie informatique et science des données, passionné par le développement web/mobile et l'intégration de systèmes intelligents.</p>
+        </section>
+
+        <section class="journey">
+            <h2>Parcours</h2>
+            <div class="timeline">
+                <div class="event">
+                    <h3>2022</h3>
+                    <p>Baccalauréat en Sciences et Technologies Électriques</p>
+                </div>
+                <div class="event">
+                    <h3>2022-2024</h3>
+                    <p>Classes Préparatoires à l'ENSA Khouribga</p>
+                </div>
+                <div class="event">
+                    <h3>2024-Présent</h3>
+                    <p>Étudiant en Ingénierie Informatique et Data Science</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>Compétences</h2>
+            <ul>
+                <li>Développement Web</li>
+                <li>Python</li>
+                
+                <li>Base de données</li>
+                
+            </ul>
+        </section>
+
+        <section class="contact">
+            <h2>Contact</h2>
+            <p>
+                <a href="mailto:abderahimazeroual0003@gmail.com">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="https://www.linkedin.com/in/abderrahim-azeroual-682149279/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </p>
+        </section>
+
+        <section class="projects">
+            <h2>Projets</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <h3>Gestion de laboratoire médical</h3>
+                    <p>Système complet de gestion de patients, analyses et résultats pour laboratoire médical.</p>
+                </div>
+                <div class="project">
+                    <h3>Gestion d'aéroport</h3>
+                    <p>Plateforme de gestion des opérations aéroportuaires et services associés.</p>
+                </div>
+                <div class="project">
+                    <h3>Traitement d'image</h3>
+                    <p>Application de traitement d'images avec filtrage et reconnaissance d'images.</p>
+                </div>
+                <div class="project">
+                    <h3>Site web recyclage</h3>
+                    <p>Plateforme web pour entreprise de recyclage avec système de contact.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
