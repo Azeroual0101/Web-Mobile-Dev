@@ -1,0 +1,166 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style du body avec l'image de fond floutée */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('télécharger.jpg'); /* Remplacez par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Effet de flou sur l'image de fond */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(10px); /* Ajustez le flou ici */
+    z-index: -1;
+}
+
+/* Conteneur principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    backdrop-filter: blur(5px); /* Effet de flou supplémentaire */
+}
+
+/* Titre */
+.title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Ligne de séparation */
+hr {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+/* Formulaire de tâche */
+.task-form {
+    margin-bottom: 20px;
+}
+
+.task-form input[type="text"],
+.task-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.task-form .time-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.task-form .time-input input {
+    width: 60px;
+    text-align: center;
+}
+
+.task-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task-form button:hover {
+    background-color: #218838;
+}
+
+/* Affichage de la tâche actuelle */
+.task-display {
+    margin-bottom: 20px;
+}
+
+.task-display p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.task-display span {
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* Timer */
+.timer {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Boutons */
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-wrapper button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#start {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#start:hover {
+    background-color: #218838;
+}
+
+#stop {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+#stop:hover {
+    background-color: #c82333;
+}
+
+#reset {
+    background-color: #ffc107;
+    color: #333;
+}
+
+#reset:hover {
+    background-color: #e0a800;
+}
